@@ -18,7 +18,7 @@ texts_chunk = text_split(minimal_docs)
 embeddings = download_embeddings()
 
 
-pc = Pinecone(api_key="pcsk_2BA2eA_B1ykiBi8yKofWTsAsLymGhSdFaW1jw6oJz5jqMRGJtpgD5sXn4TnBHBeHfm5pdj")
+pc = Pinecone(api_key="your_pinecone_api_key")
 
 index_name = "studentchatbot"
 
