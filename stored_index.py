@@ -17,6 +17,8 @@ minimal_docs = filter_to_minimal_docs(extracted_data)
 texts_chunk = text_split(minimal_docs)
 embeddings = download_embeddings()
 
+# pinecone_api_key = PINECONE_API_KEY
+# pc = Pinecone(api_key=pinecone_api_key)
 
 pc = Pinecone(api_key="your_pinecone_api_key")
 
