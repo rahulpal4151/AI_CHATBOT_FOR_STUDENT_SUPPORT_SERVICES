@@ -30,13 +30,13 @@ docsearch = PineconeVectorStore.from_existing_index(
 # 1. Groq LLM
 llm = ChatGroq(
     model="llama-3.1-8b-instant", 
-    temperature=0.3, 
-    max_tokens=500,
+    temperature=0.1, 
+    max_tokens=1500,
     groq_api_key=os.getenv("GROQ_API_KEY")
 )
 
 # 2. Base Retriever (Pinecone database connection - k ki value 10 ya 15 safe rahegi)
-base_retriever = docsearch.as_retriever(search_kwargs={"k": 20})
+base_retriever = docsearch.as_retriever(search_kwargs={"k": 15})
 
 # 2.5 Bullet-Proof Safe Retriever Function (Jo dictionary se search text nikalegi)
 def safe_retrieve(chain_input):
